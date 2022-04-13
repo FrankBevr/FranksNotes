@@ -1,1 +1,4 @@
+---
+tags: [other]
+---
 hello world
