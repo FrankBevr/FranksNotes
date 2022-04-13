@@ -1,6 +1,4 @@
-# Neuron Template
-
-- [[hello3]]#
+# Franks Notes
 
 - [[faq]]#
 - [[hello3]]#
