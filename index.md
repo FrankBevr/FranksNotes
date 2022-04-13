@@ -1,4 +1,3 @@
 # Franks Notes
 
-- [[faq]]#
-- [[hello3]]#
+- [[Introduction]]#
