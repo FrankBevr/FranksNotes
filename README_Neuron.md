@@ -4,7 +4,7 @@
 
 - Login to GitHub and go to <https://github.com/srid/neuron-template/generate>
 - Give your new repository a name, say `mynotes`
-- Select "*Include all branches*" ([might be necessary to get the site to publish](https://stackoverflow.com/a/47368231/55246))
+- Select "_Include all branches_" ([might be necessary to get the site to publish](https://stackoverflow.com/a/47368231/55246))
 - Click "Create repository from template"
   - Note: if you are on the free GitHub plan, your repository should be public for GitHub to publish it.
 
@@ -24,10 +24,9 @@ To understand how linking works, read [the neuron guide on Linking][linking].
 
 For other ways to edit your notes (editors, web interface), see the [neuron guide][create]. In particular, [Cerveau](https://www.cerveau.app/) is the easiest way to edit your notes on the go.
 
-Got questions? Checkout the [[faq]]. To find who else is using this template *publicly on GitHub*, [see here](https://github.com/search?o=desc&q=filename%3Aneuron.dhall&s=indexed&type=Code).
+Got questions? Checkout the [[faq]]. To find who else is using this template _publicly on GitHub_, [see here](https://github.com/search?o=desc&q=filename%3Aneuron.dhall&s=indexed&type=Code).
 
 [neuron]: https://neuron.zettel.page
 [examples]: https://neuron.zettel.page/examples
 [linking]: https://neuron.zettel.page/linking
 [create]: https://neuron.zettel.page/create
-
