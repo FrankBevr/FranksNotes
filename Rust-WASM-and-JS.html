@@ -25,24 +25,63 @@
 }</code></pre><p>Create a bare minimum HTML set</p><pre><code class="sh language-sh">mkdir public
 touch public/index.html
 touch public/main.js</code></pre><p>Write in index.html</p><pre><code class="html language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;title&gt;&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h2&gt;🚀Hello WASM🚀&lt;/h2&gt;
-  &lt;p&gt;This is a WASM Application&lt;/p&gt;
-  &lt;label for=&quot;&quot;&gt;
-    &lt;input type=&quot;file&quot; id=&quot;inpute&quot; accept=&quot;.png&quot; class=&quot;hidde&quot;&gt;
-  Upload an image 🦖
-  &lt;/label&gt;
-  &lt;img id=&quot;new-image&quot;&gt;
-  &lt;script&gt;
-    import * from main.js
-    console.log(&quot;Hello World&quot;)
-  &lt;/script&gt;
-&lt;/body&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Image Effects&lt;/title&gt;
+    &lt;link href=&quot;https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Pacifico&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;style&gt;
+      h1 {
+        font-family: &#39;Pacifico&#39;, cursive;
+      }
+
+      .bg {
+        animation: slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #ACFFAD 50%, #50CB93 50%);
+      }
+
+      .bg:nth-child(2) {
+        animation-direction:alternate-reverse;
+        animation-duration:4s;
+      }
+      
+      .bg:nth-child(3) {
+        animation-duration:5s;
+      }
+
+      @keyframes slide {
+        0% {
+          transform:translateX(-25%);
+        }
+        100% {
+          transform:translateX(25%);
+        }
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;bg fixed inset-y-0 -inset-x-2/4 opacity-50 z-0 bg-gradient-to-r from-yellow-400 to-pink-500&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;flex items-center justify-center h-screen relative z-100&quot;&gt;
+    
+      &lt;div class=&quot;bg-white bg-opacity-95 border shadow-lg p-10 text-center max-w-2xl&quot;&gt;
+        &lt;h1 class=&quot;text-5xl mb-8&quot;&gt;Image Effects&lt;/h1&gt;
+        &lt;p class=&quot;mb-4&quot;&gt;Need to do some basic image manipulation? Just upload your image below. We&#39;ll take care of the rest.&lt;/p&gt;
+        &lt;label class=&quot;bg-pink-600	text-white w-full p-6 block cursor-pointer font-bold mb-4&quot;&gt;
+          &lt;!-- File Input --&gt;
+          &lt;input type=&quot;file&quot; id=&quot;upload&quot; accept=&quot;.png&quot; class=&quot;hidden&quot;&gt;
+          Upload PNG Image
+        &lt;/label&gt;
+        &lt;!-- Image --&gt;
+        &lt;img id=&quot;new-img&quot; class=&quot;w-auto mx-auto&quot;&gt;
+      &lt;/div&gt;
+      
+    &lt;/div&gt;
+  &lt;/body&gt;
 &lt;/html&gt;</code></pre><p>Content of webpack.config.js</p><pre><code class="js language-js">const path = require(&#39;path&#39;)
 const HTMLWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
 
