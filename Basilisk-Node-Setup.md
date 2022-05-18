@@ -185,7 +185,55 @@ Aaand it failed. At least now I know that its unlikely that the problem is own m
 
 ![screenshot](https://i.ibb.co/DYXwKHd/image.png)
 
-### Story continues ...
+###  Cloud Server Trial
 
-I guess the next test would be to run it own a remote server. ufff looong roaaad 🛺
+I have Cloud Server(alias Hermes). Now try to run it there, because maybe I have to less power and the rust compiler doesn't like it. Its hard to imagine but yeah, definitely another possible source of error.
 
+LogIn via SSH
+
+![screenshot](https://i.ibb.co/28Q9nqr/image.png)
+
+use bash shell, Make a new Folder, cd into that folder, and check emptyness
+![screenshot](https://i.ibb.co/k1gzwyj/image.png)
+
+Update Ubuntu `sudo apt update && sudo apt upgrade`
+![screenshot](https://i.ibb.co/sjwHkSk/image.png)
+
+git clone Repo
+![screenshot](https://i.ibb.co/fph4M1T/image.png)
+
+first I will follow the instruction of README.md
+`curl https://getsubstrate.io -sSf | bash -s -- --fast`
+ehh doesn't work. 
+![screenshot](https://i.ibb.co/tHc7h83/image.png)
+
+Now plan 2, I will use the docker version on the Cloud Server.
+`docker compose up`
+Ahh yeah forget it, I was not in the folder 🦖
+`cd Basiliks-Node`
+`sudo apt install docker-compose`
+`docker-compose up`
+![screenshot](https://i.ibb.co/K2SqGV2/image.png)
+
+Ohh maaan, port is already in use because my robonomics node is running there.
+
+I will not reconfigure something, for just a trial. So Server method is out.
+
+![screenshot](https://i.ibb.co/TKDz929/image.png)
+
+Maybe on Linode oder AWS, would be the next trial.
+
+I am out of motivation for today. 
+
+### ufff looong roaaad 🛺
+
+```
+ ____  _                                     _   _                       
+/ ___|| |_ ___  _ __ _   _    ___ ___  _ __ | |_(_)_ __  _   _  ___  ___ 
+\___ \| __/ _ \| '__| | | |  / __/ _ \| '_ \| __| | '_ \| | | |/ _ \/ __|
+ ___) | || (_) | |  | |_| | | (_| (_) | | | | |_| | | | | |_| |  __/\__ \
+|____/ \__\___/|_|   \__, |  \___\___/|_| |_|\__|_|_| |_|\__,_|\___||___/
+                     |___/                                               
+
+```
+...
