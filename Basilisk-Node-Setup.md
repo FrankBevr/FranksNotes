@@ -162,6 +162,26 @@ rustc
   -L native=/tmp/cargo-installRRDXGO/release/build/bzip2-sys-56a72a1f81dd5259/out/lib 
   -L native=/tmp/cargo-installRRDXGO/release/build/lz4-sys-607aff43723f5693/out
 ```
+
+### Docker Trial
+
+`docker compose up` didn't work and `docker image` didn't work
+
+I restarted my docker with `service start docker`
+
+`docker compose up` throw and wsl error, i read the [docs](https://docs.docker.com/desktop/windows/wsl/)
+
+I recognized that my Docker on my wsl was working but the latest version of docker allowed wsl to communicate with my Docker Windows.
+
+I updated my docker
+
+Restarted my PC
+
+`docker compose up` is now running
+
+![screenshot](https://i.ibb.co/YZ9c2dp/image.png)
+
+
 ### Story continues ...
 I try maybe a VM or go to Docker or change some files or  ... I don't know, but that could be a long road ... 🛺
 
