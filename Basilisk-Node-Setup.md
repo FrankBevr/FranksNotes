@@ -1,3 +1,4 @@
+
 # Basilisk-Node-Setup
 
 ## Section 1
@@ -92,5 +93,76 @@ rustc
 ### Reinstall polkadot with `--tag v0.9.21`, No Tag is not possible
 ![Screenshot](https://i.ibb.co/KVwz6HG/image.png)
 
+### Got the same error but 2021 edition 😐
+![Screenshot](https://i.ibb.co/B62fGJ6/image.png)
+https://i.ibb.co/B62fGJ6/image.png
+```sh
+rustc 
+  --crate-name polkadot_cli 
+  --edition=2021 cli/src/lib.rs 
+  --error-format=json 
+  --json=diagnostic-rendered-ansi 
+  --crate-type cdylib 
+  --crate-type rlib 
+  --emit=dep-info,link 
+  -C opt-level=3 
+  -C embed-bitcode=no 
+  --cfg 'feature="clap"' 
+  --cfg 'feature="cli"' 
+  --cfg 'feature="db"' 
+  --cfg 'feature="default"' 
+  --cfg 'feature="frame-benchmarking-cli"' 
+  --cfg 'feature="full-node"' 
+  --cfg 'feature="kusama-native"' 
+  --cfg 'feature="polkadot-client"' 
+  --cfg 'feature="polkadot-native"' 
+  --cfg 'feature="polkadot-node-core-pvf"' 
+  --cfg 'feature="polkadot-performance-test"' 
+  --cfg 'feature="rococo-native"' 
+  --cfg 'feature="sc-cli"' 
+  --cfg 'feature="sc-service"' 
+  --cfg 'feature="sc-tracing"' 
+  --cfg 'feature="service"' 
+  --cfg 'feature="trie-memory-tracker"' 
+  --cfg 'feature="try-runtime-cli"' 
+  --cfg 'feature="wasmtime"' 
+  --cfg 'feature="westend-native"' 
+  -C metadata=7f1e4e10e83efa4d 
+  --out-dir /tmp/cargo-installRRDXGO/release/deps 
+  -L dependency=/tmp/cargo-installRRDXGO/release/deps 
+  --extern clap=/tmp/cargo-installRRDXGO/release/deps/libclap-67180049c03c1774.rlib 
+  --extern frame_benchmarking_cli=/tmp/cargo-installRRDXGO/release/deps/libframe_benchmarking_cli-889a275a14595224.rlib 
+  --extern futures=/tmp/cargo-installRRDXGO/release/deps/libfutures-faba47a47099c091.rlib 
+  --extern log=/tmp/cargo-installRRDXGO/release/deps/liblog-9bdf5b6277bfbc51.rlib 
+  --extern polkadot_client=/tmp/cargo-installRRDXGO/release/deps/libpolkadot_client-6629dbde29368f11.rlib 
+  --extern polkadot_node_core_pvf=/tmp/cargo-installRRDXGO/release/deps/libpolkadot_node_core_pvf-ac6132bd9194becb.rlib 
+  --extern polkadot_node_metrics=/tmp/cargo-installRRDXGO/release/deps/libpolkadot_node_metrics-bbf0e8c0ef8974a0.rlib 
+  --extern polkadot_performance_test=/tmp/cargo-installRRDXGO/release/deps/libpolkadot_performance_test-3a9019484fbc0e90.rlib 
+  --extern service=/tmp/cargo-installRRDXGO/release/deps/libpolkadot_service-07416f81ed098893.rlib 
+  --extern sc_cli=/tmp/cargo-installRRDXGO/release/deps/libsc_cli-b0e2f6b529d57517.rlib 
+  --extern sc_service=/tmp/cargo-installRRDXGO/release/deps/libsc_service-40c60fbb3f253596.rlib 
+  --extern sc_tracing=/tmp/cargo-installRRDXGO/release/deps/libsc_tracing-b789ec3d40adef14.rlib 
+  --extern sp_core=/tmp/cargo-installRRDXGO/release/deps/libsp_core-648641ae987f2663.rlib 
+  --extern sp_trie=/tmp/cargo-installRRDXGO/release/deps/libsp_trie-55a883554852bbdb.rlib 
+  --extern thiserror=/tmp/cargo-installRRDXGO/release/deps/libthiserror-092adf41dd3afe3e.rlib 
+  --extern try_runtime_cli=/tmp/cargo-installRRDXGO/release/deps/libtry_runtime_cli-5287f1ba00d747f7.rlib 
+  --cfg 'build_type="release"' 
+  -L native=/tmp/cargo-installRRDXGO/release/build/tikv-jemalloc-sys-a141bf6f954b632a/out/build/lib 
+  -L native=/tmp/cargo-installRRDXGO/release/build/secp256k1-sys-4ed5f554ed721c19/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/psm-23a29a2de79ff90f/out 
+  -L src/imp/linux_raw/arch/outline/release -L native=/tmp/cargo-installRRDXGO/release/build/zstd-sys-bfc1d02e200f82fb/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/wasmtime-runtime-f91edc9bfb69a2a1/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/ring-d1bb17fce8d8df4b/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/libz-sys-0ba56d5eb34bf760/out/lib 
+  -L native=/tmp/cargo-installRRDXGO/release/build/libz-sys-0ba56d5eb34bf760/out/lib 
+  -L native=/tmp/cargo-installRRDXGO/release/build/blake3-f0a6be6e5f25ab28/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/blake3-f0a6be6e5f25ab28/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/librocksdb-sys-f39d5b2ee0acbe7f/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/librocksdb-sys-f39d5b2ee0acbe7f/out 
+  -L native=/tmp/cargo-installRRDXGO/release/build/bzip2-sys-56a72a1f81dd5259/out/lib 
+  -L native=/tmp/cargo-installRRDXGO/release/build/lz4-sys-607aff43723f5693/out
+```
 ### Story continues ...
-most likely it will fail again and then I try maybe a VM or go to Docker or change some files or  ... I dont know, but that could be a long road ... 🛺
+I try maybe a VM or go to Docker or change some files or  ... I don't know, but that could be a long road ... 🛺
+
+
