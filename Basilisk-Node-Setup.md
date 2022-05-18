@@ -88,4 +88,9 @@ rustc
 ```
 ## Section 2 - `polkadot-cli` BugFinding
 
+
+### Reinstall polkadot with `--tag v0.9.21`, No Tag is not possible
+![Screenshot](https://i.ibb.co/KVwz6HG/image.png)
+
 ### Story continues ...
+most likely it will fail again and then I try maybe a VM or go to Docker or change some files or  ... I dont know, but that could be a long road ... 🛺
