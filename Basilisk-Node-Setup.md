@@ -181,8 +181,11 @@ Restarted my PC
 
 ![screenshot](https://i.ibb.co/YZ9c2dp/image.png)
 
+Aaand it failed. At least now I know that its unlikely that the problem is own my side. Its the same Error and its running in Docker, which means it is own isoleted System. 
+
+![screenshot](https://i.ibb.co/DYXwKHd/image.png)
 
 ### Story continues ...
-I try maybe a VM or go to Docker or change some files or  ... I don't know, but that could be a long road ... 🛺
 
+I guess the next test would be to run it own a remote server. ufff looong roaaad 🛺
 
